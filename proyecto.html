@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#17121d" />
+  <title>Proyecto — IRIVA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="project-viewer.css" />
+</head>
+<body>
+  <header class="viewer-header">
+    <a class="back-btn" href="index.html#proyectos" aria-label="Regresar a proyectos">← <span>Regresar a proyectos</span></a>
+    <div class="viewer-title-wrap">
+      <span class="viewer-kicker">PROYECTO</span>
+      <h1 id="projectTitle">Proyecto IRIVA</h1>
+    </div>
+    <div class="viewer-actions" role="group" aria-label="Modo de visualización">
+      <button class="mode-btn active" data-mode="scroll">Desplazar</button>
+      <button class="mode-btn" data-mode="slides">Diapositiva</button>
+      <a class="pdf-btn" id="pdfLink" href="#" target="_blank" rel="noopener">Abrir PDF</a>
+    </div>
+  </header>
+
+  <main class="viewer-main">
+    <section class="scroll-view" id="scrollView" aria-label="Vista del PDF para desplazamiento"></section>
+
+    <section class="slide-view" id="slideView" hidden aria-label="Vista del PDF como diapositiva">
+      <button class="slide-arrow prev" id="prevSlide" aria-label="Página anterior">‹</button>
+      <div class="slide-stage">
+        <img id="slideImage" src="" alt="Página del proyecto" />
+        <div class="slide-counter" id="slideCounter">1 / 1</div>
+      </div>
+      <button class="slide-arrow next" id="nextSlide" aria-label="Página siguiente">›</button>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="project-viewer.js"></script>
+</body>
+</html>

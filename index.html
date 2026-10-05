@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#7a4cff" />
+  <meta name="description" content="IRIVA, agencia creativa de estrategia, diseño y comunicación visual." />
+  <title>IRIVA — Una mirada para cada idea</title>
+  <script>
+    // La maqueta desktop fue diseñada a 950 px de ancho.
+    // En pantallas de escritorio escalamos TODO el lienzo de forma proporcional
+    // para que posiciones, textos, tarjetas, imágenes y alturas no se deformen.
+    (function () {
+      function syncDesktopReference() {
+        var w = window.innerWidth || document.documentElement.clientWidth || 950;
+        var desktop = w > 900;
+        document.documentElement.classList.toggle('desktop-reference', desktop);
+        if (desktop) {
+          var scale = Math.min(w / 950, 2.05);
+          document.documentElement.style.setProperty('--desktop-zoom', String(scale));
+        } else {
+          document.documentElement.style.setProperty('--desktop-zoom', '1');
+        }
+      }
+      syncDesktopReference();
+      window.addEventListener('resize', syncDesktopReference, { passive: true });
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a href="#top" class="brand" aria-label="IRIVA inicio">
+        <img src="assets/logo-iriva.png" alt="IRIVA" />
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy hero-enter">
+          <p class="eyebrow purple">AGENCIA DE DISEÑO</p>
+          <h1 id="hero-title"><span>Una mirada</span><br>para cada idea.</h1>
+          <div class="accent-line" aria-hidden="true"></div>
+          <p class="hero-text">Transformamos ideas en propuestas creativas con<br class="desktop-break"> estrategia, diseño y comunicación visual.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
+            <a class="btn btn-outline" href="#contacto">Conversemos</a>
+          </div>
+        </div>
+        <div class="hero-art hero-enter delay-1" aria-hidden="true">
+          <div class="hero-halo"></div>
+          <img src="assets/abs-2.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="about light-section" id="nosotros">
+      <div class="container about-grid reveal-group">
+        <div class="about-title reveal">
+          <p class="eyebrow gold">NOSOTROS</p>
+          <h2>Las ideas cambian<br>cuando cambia la<br>mirada.</h2>
+        </div>
+        <div class="about-copy reveal delay-1">
+          <p>En IRIVA creemos que toda idea tiene el potencial<br class="desktop-break"> de convertirse en algo que conecte y deje huella.</p>
+          <p>Somos una agencia publicitaria que combina<br class="desktop-break"> creatividad, diseño y estrategia para ayudar a<br class="desktop-break"> emprendedores y pequeños negocios a comunicar<br class="desktop-break"> mejor lo que hacen y hacer que sus marcas<br class="desktop-break"> destaquen.</p>
+          <div class="about-mini-line" aria-hidden="true"></div>
+          <div class="keywords"><span>CREATIVIDAD</span><i>•</i><span>INNOVACIÓN</span><i>•</i><span>PERSPECTIVA</span></div>
+        </div>
+      </div>
+      <img class="about-decoration" src="assets/abs-3.png" alt="" aria-hidden="true" />
+    </section>
+
+    <section class="services" id="servicios">
+      <div class="container">
+        <div class="section-intro reveal">
+          <p class="eyebrow gold">SERVICIOS</p>
+          <h2>Ideas con dirección.</h2>
+          <p>Pensamos, diseñamos y comunicamos para darle una<br class="desktop-break"> identidad propia a cada proyecto.</p>
+        </div>
+
+        <div class="service-grid reveal-group">
+          <article class="service-card reveal">
+            <span class="service-number">01</span>
+            <h3>Logotipo e<br>identidad visual</h3>
+            <p>Sistemas visuales con una<br>personalidad reconocible<br>para tu marca.</p>
+            <div class="mini-line"></div>
+            <a href="#contacto" class="mini-btn service-request" data-service="Logotipo e identidad visual">Solicítalo</a>
+            <span class="card-ring" aria-hidden="true"></span>
+          </article>
+          <article class="service-card reveal delay-1">
+            <span class="service-number">02</span>
+            <h3>Piezas<br>publicitarias</h3>
+            <p>Comunicaciones que<br>atraen la mirada y dan una<br>razón para actuar.</p>
+            <div class="mini-line"></div>
+            <a href="#contacto" class="mini-btn service-request" data-service="Piezas publicitarias">Solicítalo</a>
+            <span class="card-ring" aria-hidden="true"></span>
+          </article>
+          <article class="service-card reveal delay-2">
+            <span class="service-number">03</span>
+            <h3>Gestión de<br>redes</h3>
+            <p>Contenido y dirección para<br>construir conversación con tu<br>comunidad.</p>
+            <div class="mini-line"></div>
+            <a href="#contacto" class="mini-btn service-request" data-service="Gestión de redes">Solicítalo</a>
+            <span class="card-ring" aria-hidden="true"></span>
+          </article>
+          <article class="service-card reveal delay-3">
+            <span class="service-number">04</span>
+            <h3>Diseño<br>publicitario</h3>
+            <p>Campañas que ordenan el<br>mensaje, el concepto y la<br>experiencia visual.</p>
+            <div class="mini-line"></div>
+            <a href="#contacto" class="mini-btn service-request" data-service="Diseño publicitario">Solicítalo</a>
+            <span class="card-ring" aria-hidden="true"></span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" id="proyectos">
+      <div class="container">
+        <div class="projects-head reveal">
+          <div class="projects-topline">
+            <p class="eyebrow gold">PROYECTOS</p>
+            <div class="filters" aria-label="Filtros de proyectos">
+              <button class="filter-btn active" data-filter="all">Todo</button>
+              <button class="filter-btn" data-filter="publicidad">Diseño publicitario</button>
+              <button class="filter-btn" data-filter="identidad">Logos y identidad</button>
+              <button class="filter-btn" data-filter="redes">Redes</button>
+              <button class="filter-btn" data-filter="editorial">Diseño publicitario</button>
+            </div>
+          </div>
+          <div class="projects-copy">
+            <h2><span>Propuestas que</span><span>cambian el punto de vista.</span></h2>
+          </div>
+        </div>
+
+        <div class="project-canvas reveal-group">
+          <a class="project-card project-ofelita reveal" data-category="identidad editorial" href="proyecto.html?id=ofelita" aria-label="Ver proyecto Manual de marca de Ofelita">
+            <img src="assets/project-ofelita.webp" alt="Proyecto de identidad visual para Ofelita" />
+            <span class="project-shade"></span>
+            <span class="project-meta"><strong>Manual de marca</strong><small>IDENTIDAD</small></span>
+            <span class="project-link" aria-hidden="true">+</span>
+          </a>
+          <a class="project-card project-bts reveal delay-1" data-category="publicidad redes" href="proyecto.html?id=bts" aria-label="Ver proyecto Tarjetas BTS">
+            <img src="assets/project-tarjetas.webp" alt="Diseño de tarjetas publicitarias de BTS" />
+            <span class="project-shade"></span>
+            <span class="project-meta"><strong>Tarjetas</strong><small>DISEÑO PUBLICITARIO</small></span>
+            <span class="project-link" aria-hidden="true">+</span>
+          </a>
+          <a class="project-card project-wayna reveal delay-2" data-category="identidad" href="proyecto.html?id=wayna" aria-label="Ver proyecto Wayna Spa">
+            <img src="assets/project-wayna.webp" alt="Proyecto de creación de logo para Wayna Spa" />
+            <span class="project-shade"></span>
+            <span class="project-meta"><strong>Creación de logo</strong><small>IDENTIDAD</small></span>
+            <span class="project-link" aria-hidden="true">+</span>
+          </a>
+          <a class="project-card project-hec reveal delay-3" data-category="identidad" href="proyecto.html?id=hec-cakes" aria-label="Ver proyecto Héc Cokes">
+            <img src="assets/project-hec.webp" alt="Proyecto de identidad de logo para Héc Cokes" />
+            <span class="project-shade"></span>
+            <span class="project-meta"><strong>Identidad de logo</strong><small>IDENTIDAD</small></span>
+            <span class="project-link" aria-hidden="true">+</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="team" id="equipo">
+      <div class="container team-grid">
+        <div class="team-heading reveal">
+          <p class="eyebrow purple">EQUIPO</p>
+          <h2>Una mirada<br>compartida.</h2>
+          <p>Cuatro perspectivas que se<br>encuentran para crear ideas con<br>intención.</p>
+        </div>
+
+        <div class="team-cards reveal-group">
+          <article class="team-card reveal">
+            <span class="team-number">01</span>
+            <div class="team-top">
+              <h3>Francini Hinostroza</h3>
+              <img src="assets/francini.webp" alt="Francini Hinostroza" />
+            </div>
+            <p>Dirige y coordina la agencia, además<br>de desarrollar piezas gráficas y<br>propuestas visuales.</p>
+            <span class="team-role">Dirección y diseño</span>
+          </article>
+
+          <article class="team-card reveal delay-1">
+            <span class="team-number">02</span>
+            <div class="team-top">
+              <h3>José Chumbiriza</h3>
+              <span class="portrait-placeholder" aria-hidden="true"></span>
+            </div>
+            <p>Planifica estrategias publicitarias,<br>gestiona contenidos y fortalece la<br>presencia de IRIVA en redes.</p>
+            <span class="team-role">Publicidad y redes</span>
+          </article>
+
+          <article class="team-card reveal delay-2">
+            <span class="team-number">03</span>
+            <div class="team-top">
+              <h3>Linda Miche</h3>
+              <img src="assets/linda.webp" alt="Linda Miche" />
+            </div>
+            <p>Desarrolla piezas gráficas,<br>composiciones visuales y recursos<br>de diseño que comunican ideas.</p>
+            <span class="team-role">Diseño gráfico</span>
+          </article>
+
+          <article class="team-card reveal delay-3">
+            <span class="team-number">04</span>
+            <div class="team-top">
+              <h3>Yazid Tello</h3>
+              <img src="assets/yazid.webp" alt="Yazid Tello" />
+            </div>
+            <p>Crea logotipos, identidad corporativa<br>y branding para fortalecer la<br>personalidad de cada marca.</p>
+            <span class="team-role">Identidad visual</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact light-section" id="contacto">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <img class="contact-ring" src="assets/contact-ring.svg" alt="" aria-hidden="true" />
+          <img class="contact-yellow" src="assets/contact-yellow.svg" alt="" aria-hidden="true" />
+          <div class="contact-copy">
+            <p class="eyebrow gold">CONTACTO</p>
+            <h2>Tu próxima<br>idea merece<br>una mirada.</h2>
+            <p>¿Tienes una idea en mente? La vemos desde otra<br class="desktop-break"> perspectiva.</p>
+            <div class="socials" aria-label="Redes sociales">
+              <a href="#" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="">Instagram</a>
+              <a href="#" aria-label="Facebook"><img src="assets/icons/facebook-f.svg" alt="">Facebook</a>
+              <a href="#" aria-label="TikTok"><img src="assets/icons/tiktok.svg" alt="">Tik tok</a>
+              <a href="mailto:hola@iriva.pe" aria-label="Correo"><img src="assets/icons/envelope.svg" alt="">Correo</a>
+              <a href="#" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt="">WhatsApp</a>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <label>Nombre
+              <input type="text" name="nombre" placeholder="Nombre completo" required>
+            </label>
+            <label>Servicio
+              <select name="servicio" id="serviceSelect" required>
+                <option value="Consulta general">Consulta general</option>
+                <option value="Logotipo e identidad visual">Logotipo e identidad visual</option>
+                <option value="Piezas publicitarias">Piezas publicitarias</option>
+                <option value="Gestión de redes">Gestión de redes</option>
+                <option value="Diseño publicitario">Diseño publicitario</option>
+              </select>
+            </label>
+            <label>Mensaje
+              <textarea name="mensaje" rows="4" placeholder="Cuéntanos brevemente" required></textarea>
+            </label>
+            <button class="send-btn" type="submit">Enviar mensaje</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-logo" src="assets/logo-iriva-white.png" alt="IRIVA" />
+        <p class="footer-tagline">Una mirada para cada idea.</p>
+        <p class="copyright">© 2026 IRIVA · Agencia creativa</p>
+      </div>
+      <nav class="footer-nav" aria-label="Navegación del pie">
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

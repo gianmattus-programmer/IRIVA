@@ -1,0 +1,54 @@
+/* --------------------------------------------------------------------------
+   DESKTOP REFERENCE LOCK
+   --------------------------------------------------------------------------
+   La referencia entregada corresponde a un lienzo desktop de 950 px.
+   En lugar de dejar que el contenedor crezca y rompa proporciones en 1366,
+   1440 o 1920 px, mantenemos exactamente ese lienzo y lo escalamos completo.
+   Así se conservan sin alteración las filas, columnas, saltos de línea,
+   anchos de imágenes, alturas de secciones y posiciones de la composición.
+---------------------------------------------------------------------------- */
+@media (min-width:901px){
+  html.desktop-reference{
+    width:100%;
+    min-width:901px;
+    overflow-x:hidden;
+    background:#fff;
+  }
+
+  html.desktop-reference body{
+    width:950px;
+    min-width:950px;
+    max-width:950px;
+    margin:0;
+    zoom:var(--desktop-zoom,1);
+    overflow-x:hidden;
+    transform:none;
+  }
+
+  /* 86 % de 950 = 817 px, exactamente la caja usada por la referencia. */
+  html.desktop-reference .container{
+    width:817px;
+    max-width:817px;
+    min-width:817px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  html.desktop-reference .site-header,
+  html.desktop-reference main,
+  html.desktop-reference .footer{
+    width:950px;
+    max-width:950px;
+  }
+
+  /* Evita que reglas fluidas heredadas modifiquen el layout desktop. */
+  html.desktop-reference .hero,
+  html.desktop-reference .about,
+  html.desktop-reference .services,
+  html.desktop-reference .projects,
+  html.desktop-reference .team,
+  html.desktop-reference .contact,
+  html.desktop-reference .footer{
+    min-width:950px;
+  }
+}
